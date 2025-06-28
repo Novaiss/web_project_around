@@ -1,0 +1,116 @@
+/* Fundo escuro do popup */
+.popup {
+  position: fixed;           /* Sempre fica na tela, mesmo se rolar */
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: none;             /* Só mostra quando for aberto */
+  align-items: center;       /* Centraliza verticalmente */
+  justify-content: center;   /* Centraliza horizontalmente */
+  background: rgba(0,0,0,0.7);  /* Fundo preto semitransparente */
+  z-index: 1000;             /* Garante que fica na frente de tudo */
+}
+
+/* Classe para abrir o popup */
+.popup_opened {
+  display: flex;             /* Mostra o popup (ativa flexbox para centralizar) */
+}
+
+/* Caixa branca do popup */
+.popup__container {
+  background: #fff;          /* Fundo branco */
+  border-radius: 10px;       /* Cantos arredondados */
+  padding: 32px 36px 28px 36px;
+  max-width: 430px;          /* Não passa disso mesmo em telas grandes */
+  width: 90vw;               /* Ocupa 90% da tela no mobile */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.28); /* Sombra ao redor */
+  position: relative;        /* Para posicionar o botão de fechar */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Botão de fechar no canto superior direito */
+.popup__close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  background-image: url('../images/close-x.svg'); /* Ícone X */
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+.popup__close-btn:hover {
+  filter: brightness(0.7);
+}
+
+/* Título do popup */
+.popup__title {
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 30px 0;
+  text-align: left;
+}
+
+/* Formulário */
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Campos de texto */
+.popup__input {
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #bbb;
+  padding: 10px 2px;
+  color: #222;
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+  margin-bottom: 4px;
+  transition: border 0.2s;
+}
+.popup__input:focus {
+  border-bottom: 1.5px solid #000;
+}
+
+/* Botão de salvar */
+.popup__save-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  padding: 14px 0;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.popup__save-btn:hover {
+  background: #222;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 540px) {
+  .popup__container {
+    padding: 18px 10px 16px 10px;
+    max-width: 95vw;
+  }
+  .popup__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .popup__save-btn {
+    font-size: 0.95rem;
+  }
+}

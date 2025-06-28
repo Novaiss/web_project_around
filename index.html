@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Around The U.S</title>
+  <!-- Reset universal de estilos -->
+  <link rel="stylesheet" href="normalize.css">
+  <!-- Estilos principais -->
+  <link rel="stylesheet" href="index.css">
+  <!-- Fonte Inter do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header com título do projeto -->
+  <header class="header">
+    <h1 class="header__title">
+      Around<span class="header__subtitle">The U.S.</span>
+    </h1>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="content">
+    <!-- Perfil personalizado -->
+    <section class="profile">
+  <img src="images/luiz fernando photo.jpeg" alt="Foto de perfil de Luiz Fernando Novais" class="profile__avatar">
+  <div class="profile__info">
+    <div class="profile__header">
+      <h2 class="profile__name">Luiz Fernando Novais</h2>
+      <button type="button" class="profile__edit-btn" aria-label="Editar perfil"></button>
+    </div>
+    <p class="profile__role">Web Developer</p>
+  </div>
+  <button type="button" class="profile__add-btn" aria-label="Adicionar novo card">+</button>
+</section>
+
+    <!-- Cards do nicho web -->
+    <section class="cards">
+      <ul class="cards__list">
+        <li class="card">
+          <img src="images/react.png" alt="Logo do React" class="card__image">
+          <div class="card__description">
+            <h3 class="card__title">React</h3>
+            <button type="button" class="card__like-btn" aria-label="Curtir"></button>
+          </div>
+        </li>
+        <li class="card">
+          <img src="images/vscode.png" alt="Logo do VSCode" class="card__image">
+          <div class="card__description">
+            <h3 class="card__title">VSCode</h3>
+            <button type="button" class="card__like-btn" aria-label="Curtir"></button>
+          </div>
+        </li>
+        <li class="card">
+          <img src="images/github.png" alt="Logo do GitHub" class="card__image">
+          <div class="card__description">
+            <h3 class="card__title">GitHub</h3>
+            <button type="button" class="card__like-btn" aria-label="Curtir"></button>
+          </div>
+        </li>
+        <li class="card">
+          <img src="images/javascript.png" alt="Logo do JavaScript" class="card__image">
+          <div class="card__description">
+            <h3 class="card__title">JavaScript</h3>
+            <button type="button" class="card__like-btn" aria-label="Curtir"></button>
+          </div>
+        </li>
+        <li class="card">
+          <img src="images/css.png" alt="Logo do CSS3" class="card__image">
+          <div class="card__description">
+            <h3 class="card__title">CSS3</h3>
+            <button type="button" class="card__like-btn" aria-label="Curtir"></button>
+          </div>
+        </li>
+        <li class="card">
+          <img src="images/html.png" alt="Logo do HTML5" class="card__image">
+          <div class="card__description">
+            <h3 class="card__title">HTML5</h3>
+            <button type="button" class="card__like-btn" aria-label="Curtir"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2025 Around The Web.</p>
+  </footer>
+
+  <!-- Script principal -->
+ <!-- Popup de edição do perfil -->
+<div class="popup" id="profile-popup">
+  <div class="popup__container">
+    <button type="button" class="popup__close-btn" aria-label="Fechar"></button>
+    <h2 class="popup__title">Editar perfil</h2>
+    <form class="popup__form" name="profile-form" autocomplete="off">
+      <input
+        type="text"
+        class="popup__input"
+        name="name"
+        placeholder="Nome"
+        required
+        minlength="2"
+        maxlength="40"
+      />
+      <input
+        type="text"
+        class="popup__input"
+        name="role"
+        placeholder="Sobre mim"
+        required
+        minlength="2"
+        maxlength="200"
+      />
+      <button type="submit" class="popup__save-btn">Salvar</button>
+    </form>
+  </div>
+  <script src="scripts/index.js"></script>
+</div>
+
+</body>
+</html>

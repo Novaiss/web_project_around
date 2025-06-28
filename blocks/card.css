@@ -1,0 +1,93 @@
+.cards {
+  max-width: 880px;
+  margin: 0 auto 40px auto;
+  height: 743px;
+}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 17px;
+  list-style: none;
+  margin: 0;
+}
+
+.card {
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.card__image {
+width: 282px;
+height: 282px;
+object-fit: cover;
+display: block;
+  
+}
+
+.card__description {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 16px 18px 16px;
+  min-height: 60px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.card__title {
+font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card__like-btn {
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-image: url('../images/coracao.svg');
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+  margin-left: 12px;
+  transition: filter 0.2s;
+}
+.card__like-btn:hover,
+.card__like-btn:focus {
+  filter: invert(39%) sepia(68%) saturate(2821%) hue-rotate(181deg) brightness(95%) contrast(101%);
+}
+
+ @media screen and (max-width: 759px) {
+    .card__title {
+      font-size: 18px;
+      padding-left: 15px;
+    }
+  }
+
+
+
+ @media screen and (max-width: 320px) {
+
+  .card {
+    width: 90%;
+    margin: 0 auto 10px auto;
+  }
+ }

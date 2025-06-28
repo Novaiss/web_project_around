@@ -1,0 +1,153 @@
+.profile {
+  margin: 40px auto 50px;
+  max-width: 860px;
+  display: grid;
+  grid-template-columns: 120px 1fr 150px;
+  align-items: center;
+  gap: 0 24px;
+  background: #000;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+.profile__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  display: block;
+}
+
+.profile__info {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0; /* Permite ellipsis */
+}
+
+.profile__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.profile__name {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 500;
+  color: #fff;
+  max-width: 85%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.profile__edit-btn {
+ width: 24px;
+height: 24px;
+color: white;
+background: none;
+border: none;
+margin-left: 8px;
+cursor: pointer;
+background-image: url(/images/Edit\ Button.png);
+ 
+}
+.profile__edit-btn:hover,
+.profile__edit-btn:focus {
+  filter: brightness(0.7) sepia(1) hue-rotate(180deg) saturate(4);
+  outline: none;
+}
+
+.profile__role {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 8px 0 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Botão de adicionar card */
+.profile__add-btn {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  align-self: center;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 400;
+  transition: border 0.2s, background 0.2s, color 0.2s;
+ 
+}
+.profile__add-btn:hover,
+.profile__add-btn:focus {
+  background: #222;
+  border-color: #228be6;
+  color: #228be6;
+  outline: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .profile__name {
+    font-size: 32px;
+    max-width: 400px;
+  }
+  .profile__add-btn {
+    width: 120px;
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .profile {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 16px 0;
+  }
+  .profile__avatar {
+    margin-bottom: 8px;
+  }
+  .profile__info {
+    padding: 0;
+    align-items: center;
+    width: 100%;
+  }
+  .profile__header {
+    justify-content: center;
+    width: 100%;
+  }
+  .profile__name {
+    font-size: 22px;
+    max-width: 200px;
+    text-align: center;
+  }
+  .profile__edit-btn {
+    width: 18px;
+    height: 18px;
+    background-size: 14px 14px;
+  }
+  .profile__role {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 8px;
+    max-width: 180px;
+  }
+  .profile__add-btn {
+    width: 100px;
+    font-size: 28px;
+    margin-top: 12px;
+    justify-self: center;
+  }
+}
